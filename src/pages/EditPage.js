@@ -24,8 +24,8 @@ const EditPage = () => {
     };
 
     return (
-        <div className="flex w-full h-screen">
-            <Sidebar />
+        <div className="flex w-full min-h-screen">
+            <Sidebar/>
             <div className="flex-1 p-6">
                 <button
                     onClick={handlePublish}

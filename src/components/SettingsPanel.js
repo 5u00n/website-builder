@@ -1,5 +1,15 @@
 // src/components/SettingsPanel.js
 import React, { useState, useEffect } from 'react';
+import TextSettings from './settings/TextSettings';
+import ImageSettings from './settings/ImageSettings';
+import VideoSettings from './settings/VideoSettings';
+import TableSettings from './settings/TableSettings';
+import PriceListSettings from './settings/PriceListSettings';
+import GridSettings from './settings/GridSettings';
+import FlexSettings from './settings/FlexSettings';
+import ListSettings from './settings/ListSettings';
+import HeaderSettings from './settings/HeaderSettings';
+import CarouselSettings from './settings/CarouselSettings';
 
 const SettingsPanel = ({ selectedComponent, updateComponent }) => {
   const [settings, setSettings] = useState({});
@@ -21,43 +31,37 @@ const SettingsPanel = ({ selectedComponent, updateComponent }) => {
     return <div className="p-4 text-gray-500">Select a component to edit its settings</div>;
   }
 
-
+  const renderSettings = () => {
+    switch (selectedComponent.type) {
+      case 'text':
+        return <TextSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'image':
+        return <ImageSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'video':
+        return <VideoSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'table':
+        return <TableSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'priceList':
+        return <PriceListSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'grid':
+        return <GridSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'flex':
+        return <FlexSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'list':
+        return <ListSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'header':
+        return <HeaderSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      case 'carousel':
+        return <CarouselSettings settings={settings} handleSettingChange={handleSettingChange} />;
+      default:
+        return <div className="p-4 text-gray-500">No settings available for this component</div>;
+    }
+  };
 
   return (
     <div className="w-64 p-6 bg-gray-100 h-full border-l border-gray-300">
       <h3 className="text-xl font-bold mb-6">Settings</h3>
-      <div className="mb-4">
-        <label className="block mb-2 font-medium">Text</label>
-        <input
-          type="text"
-          name="text"
-          value={settings.text || ''}
-          onChange={handleSettingChange}
-          className="w-full p-2 border border-gray-300 rounded-md"
-        />
-      </div>
-      <div className="mb-4">
-        <label className="block mb-2 font-medium">Font Size</label>
-        <input
-          type="number"
-          name="fontSize"
-          value={settings.fontSize || ''}
-          onChange={handleSettingChange}
-          className="w-full p-2 border border-gray-300 rounded-md"
-        />
-      </div>
-      <div className="mb-4">
-        <label className="block mb-2 font-medium">Text Color</label>
-        <input
-          type="color"
-          name="color"
-          value={settings.color || '#000000FF'}
-          onChange={handleSettingChange}
-          className="w-full p-2 border border-gray-300 rounded-md"
-          style={{ height: '40px' }}
-          
-        />
-      </div>
+      {renderSettings()}
     </div>
   );
 };

@@ -33,6 +33,8 @@ const Sidebar = () => {
       <ComponentItem type="text" label="Text" />
       <ComponentItem type="image" label="Image" />
       <ComponentItem type="header" label="Header" />
+      <ComponentItem type="grid" label="Grid" />
+      <ComponentItem type="flex" label="Flex" />
       <ComponentItem type="list" label="List" />
       <ComponentItem type="video" label="Video" />
       <ComponentItem type="carousel" label="Carousel" />
