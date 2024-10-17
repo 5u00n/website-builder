@@ -1,4 +1,3 @@
-// src/components/SettingsPanel.js
 import React, { useState, useEffect } from 'react';
 import TextSettings from './settings/TextSettings';
 import ImageSettings from './settings/ImageSettings';
@@ -10,6 +9,7 @@ import FlexSettings from './settings/FlexSettings';
 import ListSettings from './settings/ListSettings';
 import HeaderSettings from './settings/HeaderSettings';
 import CarouselSettings from './settings/CarouselSettings';
+import AnimationSettings from './settings/AnimationSettings';
 
 const SettingsPanel = ({ selectedComponent, updateComponent }) => {
   const [settings, setSettings] = useState({});
@@ -24,7 +24,7 @@ const SettingsPanel = ({ selectedComponent, updateComponent }) => {
     const { name, value } = e.target;
     const updatedSettings = { ...settings, [name]: value };
     setSettings(updatedSettings);
-    updateComponent(selectedComponent.id, updatedSettings); // Update the component settings
+    updateComponent(selectedComponent.id, updatedSettings);
   };
 
   if (!selectedComponent) {
@@ -62,6 +62,7 @@ const SettingsPanel = ({ selectedComponent, updateComponent }) => {
     <div className="w-64 p-6 bg-gray-100 h-full border-l border-gray-300">
       <h3 className="text-xl font-bold mb-6">Settings</h3>
       {renderSettings()}
+      <AnimationSettings settings={settings} handleSettingChange={handleSettingChange} />
     </div>
   );
 };
