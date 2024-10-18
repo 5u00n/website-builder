@@ -8,10 +8,12 @@ import { Header } from '../Elements/Header';
 import { List } from '../Elements/List';
 import { Table } from '../Elements/Table';
 import { Container } from '../Elements/Container';
+import { Button } from '../Elements/Button';
+import { Image } from '../Elements/Image';
 
 const EditorComponent = () => {
   return (
-    <Editor resolver={{ Text, Card, Header, List, Table,Container }}>
+    <Editor resolver={{ Text, Card, Header, List, Table,Container,Button,Image }}>
       <div className="flex h-screen bg-gray-100">
         <Sidebar />
         <div className="flex-1 p-4 overflow-auto">

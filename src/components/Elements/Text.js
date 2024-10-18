@@ -33,7 +33,12 @@ export const Text = ({ text,...props}) => {
      ref={(ref) => connect(drag(ref))}
      onClick={()=> selected && setEditable(true)}
      >
-      <ContentEditable html={text} onChange={(e)=> setProp(e.target.value)}
+      <ContentEditable html={text} onChange={(e)=> setProp(
+        (props) =>
+            (props.text = e.target.value.replace(/<\/?[^>]+(>|$)/g, '')),
+          500
+        
+      )}
       tagName="p"
       disabled={!editable}
       className="outline-none"

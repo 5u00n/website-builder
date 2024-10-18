@@ -5,6 +5,9 @@ import { Card } from '../Elements/Card';
 import { Header } from '../Elements/Header';
 import { List } from '../Elements/List';
 import { Table } from '../Elements/Table';
+import { Image } from '../Elements/Image';
+import { Button } from '../Elements/Button';
+import { Container } from '../Elements/Container';
 
 const componentList = [
     { name: 'Text', type: Text, props: { text: 'Sample Text' } },
@@ -12,6 +15,9 @@ const componentList = [
     { name: 'Header', type: Header },
     { name: 'List', type: List },
     { name: 'Table', type: Table },
+    { name: 'Image', type: Image },
+    { name: 'Button', type: Button },
+    {name: 'Container', type: Container }
 ];
 
 const Sidebar = () => {
