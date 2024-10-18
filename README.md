@@ -1,11 +1,14 @@
-# Web Page Builder with CraftJS, Destack, React, and Firebase
+# Web Page Builder with CraftJS, Destack, React, Tailwind CSS, and Firebase
 
-This project is a powerful web page builder that combines the flexibility of CraftJS and Destack with the robustness of React and Firebase. It allows users to create dynamic web pages with a drag-and-drop interface while leveraging Firebase for authentication and database management.
+This project is a powerful web page builder that combines the flexibility of CraftJS and Destack with the robustness of React, Tailwind CSS, and Firebase. It allows users to create dynamic web pages with a drag-and-drop interface while leveraging Firebase for authentication and database management. The project also incorporates shadcn UI components and Aceternity UI for enhanced design capabilities.
 
 ## Features
 
 - Drag-and-drop page builder using CraftJS and Destack
 - React-based frontend for a smooth user experience
+- Tailwind CSS for utility-first styling
+- shadcn UI components for consistent and customizable UI elements
+- Aceternity UI for advanced animations and interactions
 - Firebase Authentication for secure user management
 - Firebase Realtime Database for storing and retrieving page designs
 - Responsive design for various screen sizes
@@ -21,7 +24,7 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/5u00n/webpage-builder.git
+   git clone -b craft-rake-js https://github.com/5u00n/webpage-builder.git
    cd webpage-builder
    ```
 
@@ -42,6 +45,17 @@ Before you begin, ensure you have the following installed:
      REACT_APP_FIREBASE_APP_ID=your_app_id
      ```
 
+4. Install and configure Tailwind CSS:
+   ```
+   npm install -D tailwindcss
+   npx tailwindcss init
+   ```
+
+5. Install shadcn UI and Aceternity UI:
+   ```
+   npm install @shadcn/ui aceternity-ui
+   ```
+
 ## Usage
 
 1. Start the development server:
@@ -53,7 +67,7 @@ Before you begin, ensure you have the following installed:
 
 3. Sign up or log in using Firebase Authentication
 
-4. Start building your web pages using the drag-and-drop interface
+4. Start building your web pages using the drag-and-drop interface, leveraging Tailwind CSS classes, shadcn UI components, and Aceternity UI animations
 
 5. Your designs will be automatically saved to Firebase Realtime Database
 
@@ -84,5 +98,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [CraftJS](https://craft.js.org/)
 - [Destack](https://github.com/LiveDuo/destack)
 - [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn UI](https://ui.shadcn.com/)
+- [Aceternity UI](https://ui.aceternity.com/)
 - [Firebase](https://firebase.google.com/)
-
