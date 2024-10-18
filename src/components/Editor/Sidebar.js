@@ -10,7 +10,7 @@ import { Button } from '../Elements/Button';
 import { Container } from '../Elements/Container';
 
 const componentList = [
-    { name: 'Text', type: Text, props: { text: 'Sample Text' } },
+    { name: 'Text', type: Text, props: { text: 'Sample Text', dataCy: 'text-component' } },
     { name: 'Card', type: Card },
     { name: 'Header', type: Header },
     { name: 'List', type: List },
@@ -31,7 +31,7 @@ const Sidebar = () => {
                     <div
                         key={component.name}
                         ref={(ref) => connectors.create(ref,
-                            <Element is={component.type} {...component.props} text="Hello" />
+                            <Element canvas is={component.type} {...component.props} />
                             , component.props)}
                         className="w-full text-left p-2 hover:bg-gray-200 rounded cursor-move mb-2"
                     >
