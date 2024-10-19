@@ -10,10 +10,11 @@ import { Table } from '../Elements/Table';
 import { Container } from '../Elements/Container';
 import { Button } from '../Elements/Button';
 import { Image } from '../Elements/Image';
-
+import Navbar from './Navbar';
 const EditorComponent = () => {
   return (
     <Editor resolver={{ Text, Container, Image, Button, Header, List, Card, Table }}>
+      <Navbar />
       <div className="flex h-screen bg-gray-100 justify-between">
         <Sidebar className="w-[200px]" />
         <div className=" p-4 overflow-auto w-full max-w-[800px]">

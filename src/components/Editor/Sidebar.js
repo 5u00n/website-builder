@@ -27,7 +27,7 @@ const Sidebar = () => {
 
     return (
         <div className="w-64 bg-gray-800 text-white p-4 flex flex-col">
-            <h2 className="text-xl font-bold mb-6 text-center">Components</h2>
+            <h2 className="text-xl font-bold mb-6 ">Components</h2>
             <div className="mb-8 space-y-2">
                 {componentList.map((component) => (
                     <div
