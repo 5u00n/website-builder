@@ -13,16 +13,16 @@ import { Image } from '../Elements/Image';
 
 const EditorComponent = () => {
   return (
-    <Editor resolver={{ Text,Container,Image,Button,Header,List,Card,Table }}>
-      <div className="flex h-screen bg-gray-100">
-        <Sidebar />
-        <div className="flex-1 p-4 overflow-auto">
+    <Editor resolver={{ Text, Container, Image, Button, Header, List, Card, Table }}>
+      <div className="flex h-screen bg-gray-100 justify-between">
+        <Sidebar className="w-[200px]" />
+        <div className=" p-4 overflow-auto w-full max-w-[800px]">
           <Frame>
             <Element is={Container} canvas data-cy="root-container" background="#FFFFFF" padding={20} >
             </Element>
           </Frame>
         </div>
-        <SettingsPanel />
+        <SettingsPanel className="w-[200px]" />
       </div>
     </Editor>
   );
