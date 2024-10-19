@@ -2,7 +2,7 @@ import React from 'react';
 import { useEditor } from '@craftjs/core';
 
 const SettingsPanel = () => {
-  const { actions, selected, isEnabled } = useEditor((state, query) => {
+  const { actions, selected,    } = useEditor((state, query) => {
     const currentNodeId = query.getEvent('selected').last();
     console.log("currentnodeid",currentNodeId);
     let selected;
