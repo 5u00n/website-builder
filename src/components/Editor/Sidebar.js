@@ -9,33 +9,36 @@ import { Image } from '../Elements/Image';
 import { Button } from '../Elements/Button';
 import { Container } from '../Elements/Container';
 
+import { FaFont, FaRegSquare, FaHeading, FaList, FaTable, FaImage, FaRegHandPointer, FaRegObjectGroup } from 'react-icons/fa';
+
 const componentList = [
-    { name: 'Text', type: Text, props: { text: 'Sample Text', dataCy: 'text-component' } },
-    { name: 'Card', type: Card },
-    { name: 'Header', type: Header },
-    { name: 'List', type: List },
-    { name: 'Table', type: Table },
-    { name: 'Image', type: Image },
-    { name: 'Button', type: Button },
-    {name: 'Container', type: Container }
+    { name: 'Text', type: Text, props: { text: 'Sample Text', dataCy: 'text-component' }, icon: FaFont },
+    { name: 'Card', type: Card, icon: FaRegSquare },
+    { name: 'Header', type: Header, icon: FaHeading },
+    { name: 'List', type: List, icon: FaList },
+    { name: 'Table', type: Table, icon: FaTable },
+    { name: 'Image', type: Image, icon: FaImage },
+    { name: 'Button', type: Button, icon: FaRegHandPointer },
+    { name: 'Container', type: Container, icon: FaRegObjectGroup }
 ];
 
 const Sidebar = () => {
     const { connectors } = useEditor();
 
     return (
-        <div className="w-64 bg-gray-100 p-4 flex flex-col">
-            <h2 className="text-lg font-bold mb-4">Components</h2>
-            <div className="mb-8">
+        <div className="w-64 bg-gray-800 text-white p-4 flex flex-col">
+            <h2 className="text-xl font-bold mb-6 text-center">Components</h2>
+            <div className="mb-8 space-y-2">
                 {componentList.map((component) => (
                     <div
                         key={component.name}
                         ref={(ref) => connectors.create(ref,
                             <Element canvas is={component.type} {...component.props} />
                             , component.props)}
-                        className="w-full text-left p-2 hover:bg-gray-200 rounded cursor-move mb-2"
+                        className="flex items-center w-full text-left p-3 hover:bg-gray-700 rounded cursor-move transition duration-200 ease-in-out"
                     >
-                        {component.name}
+                        <component.icon className="mr-3 text-blue-400" />
+                        <span>{component.name}</span>
                     </div>
                 ))}
             </div>
