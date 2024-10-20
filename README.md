@@ -16,6 +16,7 @@ This project is a powerful web page builder that combines the flexibility of Cra
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
+
 - Node.js (v14 or later)
 - npm (v6 or later)
 - Firebase account and project set up
@@ -23,17 +24,20 @@ Before you begin, ensure you have the following installed:
 ## Installation
 
 1. Clone the repository:
+
    ```
-   git clone -b craft-rake-js https://github.com/5u00n/webpage-builder.git
-   cd webpage-builder
+   git clone -b craft-rake-js https://github.com/5u00n/react-webpage-builder.git
+   cd react-webpage-builder
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
 
 3. Set up Firebase configuration:
+
    - Create a `.env` file in the root directory
    - Add your Firebase configuration details:
      ```
@@ -46,6 +50,7 @@ Before you begin, ensure you have the following installed:
      ```
 
 4. Install and configure Tailwind CSS:
+
    ```
    npm install -D tailwindcss
    npx tailwindcss init
@@ -59,6 +64,7 @@ Before you begin, ensure you have the following installed:
 ## Usage
 
 1. Start the development server:
+
    ```
    npm start
    ```
@@ -76,6 +82,7 @@ Before you begin, ensure you have the following installed:
 To deploy the application:
 
 1. Build the project:
+
    ```
    npm run build
    ```
