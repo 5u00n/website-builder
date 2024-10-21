@@ -10,10 +10,13 @@ import { Table } from '../Elements/Table';
 import { Container } from '../Elements/Container';
 import { Button } from '../Elements/Button';
 import { Image } from '../Elements/Image';
+import { Blog } from '../Elements/Blog';
+import { FocusCards } from '../Blocks/FocusCards';
 import Navbar from './Navbar';
+
 const EditorComponent = () => {
   return (
-    <Editor resolver={{ Text, Container, Image, Button, Header, List, Card, Table }}>
+    <Editor resolver={{ Text, Container, Image, Button, Header, List, Card, Table, Blog , FocusCards  }}>
       <Navbar />
       <div className="flex h-screen bg-gray-100 justify-between">
         <Sidebar className="w-[200px]" />
@@ -30,4 +33,3 @@ const EditorComponent = () => {
 };
 
 export default EditorComponent;
-

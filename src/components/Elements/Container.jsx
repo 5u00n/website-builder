@@ -23,10 +23,10 @@ export const Container = ({ background, padding, borderRadius, borderWidth, bord
   };
 
   return (
-    <div 
-      ref={ref => connect(drag(ref))} 
+    <div
+      ref={ref => connect(drag(ref))}
       style={containerStyle}
-      className="container-element"
+      className="container-element hover:border-blue-300 hover:border  hover:border-dashed"
       {...props}
     >
       {children}
@@ -150,12 +150,12 @@ export const ContainerSettings = () => {
   );
 }
 
-export const ContainerDefaultProps = {
+const ContainerDefaultProps = {
   background: '#FFFFFF',
   padding: '20px',
   borderRadius: '5px',
-  borderWidth: '1px',
-  borderColor: '#E0E0E0',
+  borderWidth: '',
+  borderColor: '',
   margin: '10px',
   height: 'auto',
   width: '100%',
@@ -167,6 +167,8 @@ export const ContainerDefaultProps = {
   justifyContent: 'flex-start',
   alignItems: 'stretch',
 };
+
+export { ContainerDefaultProps };
 
 Container.craft = {
   props: ContainerDefaultProps,
